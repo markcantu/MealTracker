@@ -9,3 +9,20 @@ h1 {
     font: 32px;
     color: blue;
 }
+
+.welcome_container {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.create_new_item {
+    text-decoration: none;
+    border: 1px solid blue;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.create_new_item:hover {
+    color: #e9e9e9;
+    background-color: blue;
+}
