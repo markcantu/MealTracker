@@ -1,8 +1,21 @@
 <h1>New Meal Item</h1>
 <%= form_for :item, url: items_path do |f| %>
   <p>
+    <%= f.label :Image %><br>
+    <%= f.file_field :photos %>
+    
+  </p>
+  
+  <p>
     <%= f.label :Date %><br>
-    <%= f.date_select :Date, :start_year => 2019, :use_month_numbers => false, :include_blank => true, :order => [:month, :day, :year] %>
+    <%= f.date_select :Date, 
+    {
+    :start_year => 2019, 
+    :use_month_numbers => false, 
+    :include_blank => true, 
+    :order => [:month, :day, :year]
+    },
+    {:class => "input-mini"} %>
   </p>
   
   <p>
