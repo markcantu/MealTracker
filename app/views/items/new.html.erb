@@ -1,16 +1,16 @@
 <h1>New Meal Item</h1>
 <%= form_for :item, url: items_path do |f| %>
   <p>
-    <%= f.label :food_item %><br>
-    <%= f.text_field :food_item %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
   </p>
   
   <p>
-    <%= f.label :Date %><br>
+    <%= f.label :date %><br>
     
-    <%= f.date_select :Date,
+    <%= f.date_select :date,
     {:start_year => 2019, 
-    require: true,
+    required: true,
     :end_year => 2020,
     :use_month_numbers => false,
     :order => [:month, :day, :year],
@@ -22,8 +22,8 @@
   </p>
   
   <p>
-    <%= f.label :Description %><br>
-    <%= f.text_area :Description %>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
   </p>
  
   <p>
