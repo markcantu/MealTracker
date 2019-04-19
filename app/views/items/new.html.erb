@@ -1,25 +1,26 @@
 <h1>New Meal Item</h1>
 <%= form_for :item, url: items_path do |f| %>
+
+  <% if @item.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@item.errors.count, "error") %> prohibited
+          this article from being saved:
+        </h2>
+        <ul>
+          <% @item.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
   
-  <p>
-    <%= f.label :date %><br>
-    
-    <%= f.date_select :date,
-    {:start_year => 2019, 
-    required: true,
-    :end_year => 2020,
-    :use_month_numbers => false,
-    :order => [:month, :day, :year],
-    :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }},
-    
-    
-    {:class => "date_select"}
-    %>
-  </p>
+  
   
   <p>
     <%= f.label :text %><br>
