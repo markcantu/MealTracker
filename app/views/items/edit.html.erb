@@ -1,6 +1,7 @@
-<h1>New Meal Item</h1>
-<%= form_for :item, url: items_path do |f| %>
+<h1>Edit Meal Item Listing</h1>
 
+<%= form_for :item, url: item_path(@item), method: :patch do |f| %>
+ 
   <% if @item.errors.any? %>
       <div id="error_explanation">
         <h2>
@@ -19,8 +20,6 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
-  
-  
   
   <p>
     <%= f.label :text %><br>
