@@ -1,5 +1,7 @@
 <h1>Edit Meal Item Listing</h1>
 
+<%= link_to 'Back', items_path, class: "create_new_item"%>
+
 <%= form_for :item, url: item_path(@item), method: :patch do |f| %>
  
   <% if @item.errors.any? %>
@@ -17,19 +19,6 @@
     <% end %>
 
   <p>
-    <%= f.label :new_date %><br>
-    <%= f.date_select :new_date,
-    {:start_year => 2019, 
-    :end_year => 2020,
-    :use_month_numbers => false,
-    :order => [:month, :day, :year],
-    :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }},
-    
-    {:class => "date_select"}
-    %>
-  </p>
-
-  <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
@@ -42,6 +31,5 @@
   <p>
     <%= f.submit %>
   </p>
-  
-<%= link_to 'Back', items_path %>
+
 <% end %>
