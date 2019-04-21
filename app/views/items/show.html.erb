@@ -1,15 +1,13 @@
-<div class="welcome_container">
-    <p>
-        <strong class="title_text">Title:</strong>
-        <%= @item.title %>
-    </p>
-    
-    <p>
-        <strong class="title_text">Description:</strong>
-        <%= @item.text %>
-    </p>
-    
-    <br>
-    
-    <%= link_to 'Item List', items_path, class: "create_new_item" %>
-</div>
+<p>
+    <strong class="title_text">Title:</strong>
+    <%= @item.title %>
+</p>
+
+<p>
+    <strong class="title_text">Description:</strong>
+    <%= @item.text %>
+</p>
+
+<br>
+
+<%= link_to 'Item List', items_path, class: "create_new_item" %>
