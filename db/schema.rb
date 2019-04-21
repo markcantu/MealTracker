@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 2019_04_21_002512) do
     t.string "title"
     t.text "text"
     t.string "new_date"
+    
+    t.timestamps
   end
 
 end
