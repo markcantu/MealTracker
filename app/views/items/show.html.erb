@@ -10,4 +10,28 @@
 
 <br>
 
+<h2>Comments</h2>
+<% @item.comments.each do |comment| %>
+    <p>
+        <strong>Note:</strong>
+        <%= comment.body %>
+    </p>
+<% end %>
+
+<br><br>
+
+<h2>Add a commment:</h2>
+<%= form_for([@item, @item.comments.build]) do |f| %>
+    <p>
+        <%= f.label :body %><br>
+        <%= f.text_area :body %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
+
+<br><br><br>
+
 <%= link_to 'Item List', items_path, class: "create_new_item" %>
