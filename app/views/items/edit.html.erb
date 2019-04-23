@@ -19,6 +19,25 @@
     <% end %>
 
   <p>
+    <%= f.label :date %><br>
+    <%= f.date_select :date,
+      {
+      use_month_numbers: false,
+      start_year: 2019,
+      order: [:month, :day, :year],
+      prompt: { month: 'Select month', day: 'Select day', year: 'Select year' }
+      },
+      
+      {:class => "date_select"}
+    %>
+  </p>
+  
+  <p>
+    <%= f.label :image, required: true %><br>
+    <%= f.file_field :image %>
+  </p>
+  
+  <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
