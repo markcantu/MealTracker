@@ -1,5 +1,5 @@
 <p>
-    <strong class="title_text">Title:</strong>
+    <strong class="title_text">Food:</strong>
     <%= @item.title %>
 </p>
 
@@ -23,7 +23,7 @@
 <h2>Add a commment:</h2>
 <%= form_for([@item, @item.comments.build]) do |f| %>
     <p>
-        <%= f.label :body %><br>
+        <%= f.label :Extra_Notes %><br>
         <%= f.text_area :body %>
     </p>
     
