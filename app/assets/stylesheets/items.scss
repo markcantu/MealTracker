@@ -3,19 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // You can use Sass (SCSS) here: http://sass-lang.com/
 input[type=text] {
-    width: 50%;
+    width: 90%;
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #f8f8f8;
+    font-size: 20px;
 }
 
 textarea {
-    width: 50%;
+    width: 90%;
     height: 300px;
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #f8f8f8;
     resize: none;
+    font-size: 20px;
 }
 
 input[type=button], input[type=submit] {
@@ -58,5 +60,21 @@ p {
 .title_text {
     color: black;
     text-transform: uppercase;
+}
+
+.column2 {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tablediv {
+    text-align: center;
 }
 
