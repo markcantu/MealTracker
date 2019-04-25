@@ -4,6 +4,7 @@
  
 <table>
   <tr>
+    <th>Date</th>
     <th>Food Item</th>
     <th>Description</th>
   </tr>
@@ -11,6 +12,7 @@
   <div id="table">
     <% @items.each do |item| %>
       <tr>
+        <td class="column"><%= item.date %></td>
         <td class="column"><%= item.title %></td>
         <td class="column"><%= item.text %></td>
         <td><%= link_to 'Show', item_path(item), class: "create_new_item" %></td>
