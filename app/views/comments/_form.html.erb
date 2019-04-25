@@ -1,0 +1,10 @@
+<%= form_for([@item, @item.comments.build]) do |f| %>
+    <p>
+        <%= f.label :Extra_Notes %><br>
+        <%= f.text_field :body %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>

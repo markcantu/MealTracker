@@ -72,23 +72,9 @@
 <br>
 
 <h2>Comments</h2>
-<% @item.comments.each do |comment| %>
-    <p>
-        <strong>Note:</strong>
-        <%= comment.body %>
-    </p>
-<% end %>
+<%= render @item.comments %>
 
 <br>
 
 <h2>Add a commment:</h2>
-<%= form_for([@item, @item.comments.build]) do |f| %>
-    <p>
-        <%= f.label :Extra_Notes %><br>
-        <%= f.text_field :body %>
-    </p>
-    
-    <p>
-        <%= f.submit %>
-    </p>
-<% end %>
+<%= render 'comments/form' %>
