@@ -1,54 +1,96 @@
-<h1>Edit Meal Item Listing</h1>
-
-<%= link_to 'Back', items_path, class: "create_new_item"%>
-
-<%= form_for :item, url: item_path(@item), method: :patch do |f| %>
- 
-  <% if @item.errors.any? %>
-      <div id="error_explanation">
-        <h2>
-          <%= pluralize(@item.errors.count, "error") %> prohibited
-          this article from being saved:
-        </h2>
-        <ul>
-          <% @item.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-  <p>
-    <%= f.label :date %><br>
-    <%= f.date_select :date,
-      {
-      use_month_numbers: false,
-      start_year: 2019,
-      order: [:month, :day, :year],
-      prompt: { month: 'Select month', day: 'Select day', year: 'Select year' }
-      },
+<body class="gray">
+  <h1 class="listing">Edit Meal Item Listing</h1>
+  
+  <%= link_to 'Back', items_path, class: "create_new_item"%>
+  
+  <%= form_for :item, url: item_path(@item), method: :patch do |f| %>
+   
+    <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@item.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+  
+    <p>
+        <%= f.label :date %><br>
+        <%= f.date_select :date,
+          {
+          use_month_numbers: false,
+          start_year: 2019,
+          order: [:month, :day, :year],
+          prompt: { month: 'Select month', day: 'Select day', year: 'Select year' }
+          },
+          
+          {:class => "date_select"}
+        %>
+      </p>
       
-      {:class => "date_select"}
-    %>
-  </p>
-  
-  <p>
-    <%= f.label :image, required: true %><br>
-    <%= f.file_field :image %>
-  </p>
-  
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+      <div class="row">
+        <div class="column2">
+          <h2>Breakfast</h2>
+          <p>
+            <%= f.label :image, required: true %><br>
+            <%= f.file_field :image1 %>
+          </p>
+          
+          <p>
+            <%= f.label :food %><br>
+            <%= f.text_field :title1 %>
+          </p>
+          
+          <p>
+            <%= f.label :description %><br>
+            <%= f.text_area :text1 %>
+          </p>
+        </div>
+        
+        <div class="column2">
+          <h2>Lunch</h2>
+          <p>
+            <%= f.label :image, required: true %><br>
+            <%= f.file_field :image2 %>
+          </p>
+          
+          <p>
+            <%= f.label :food %><br>
+            <%= f.text_field :title2 %>
+          </p>
+          
+          <p>
+            <%= f.label :description %><br>
+            <%= f.text_area :text2 %>
+          </p>
+        </div>
+        
+        <div class="column2">
+          <h2>Dinner</h2>
+          <p>
+            <%= f.label :image, required: true %><br>
+            <%= f.file_field :image3 %>
+          </p>
+          
+          <p>
+            <%= f.label :food %><br>
+            <%= f.text_field :title3 %>
+          </p>
+          
+          <p>
+            <%= f.label :description %><br>
+            <%= f.text_area :text3 %>
+          </p>
+        </div>
+      </div>
+     
+      <p>
+        <%= f.submit %>
+      </p>
+  <% end %>
+</body>

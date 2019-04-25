@@ -1,27 +1,29 @@
-<h1>Listing items</h1>
-<%= link_to 'Add new item', new_item_path, class: "create_new_item" %>
-<%= link_to 'Home', root_path, class: "create_new_item" %>
- 
-<div class="tablediv">
-  <table>
-    <tr>
-      <th>Date</th>
-    </tr>
-    
-    <div id="table">
-      <% @items.each do |item| %>
-        <tr>
-          <td class="column"><%= item.date %></td>
-          <td><%= link_to 'Show', item_path(item), class: "create_new_item" %></td>
-          <td><%= link_to 'Edit', edit_item_path(item), class: "create_new_item" %></td>
-          <td><%= link_to 'Destroy',
-                                    item_path(item),
-                                    method: :delete,
-                                    class: "create_new_item",
-                                    data: { confirm: 'Are you sure?' } %></td>
-          
-        </tr>
-      <% end %>
-    </div>
-  </table>
-</div>
+<body class="gray">
+  <h1 class="listing">Listing items</h1>
+  <%= link_to 'Add new item', new_item_path, class: "create_new_item" %>
+  <%= link_to 'Home', root_path, class: "create_new_item" %>
+   
+  <div class="tablediv">
+    <table>
+      <tr>
+        <th>Date</th>
+      </tr>
+      
+      <div id="table">
+        <% @items.each do |item| %>
+          <tr>
+            <td class="column"><%= item.date %></td>
+            <td><%= link_to 'Show', item_path(item), class: "create_new_item" %></td>
+            <td><%= link_to 'Edit', edit_item_path(item), class: "create_new_item" %></td>
+            <td><%= link_to 'Destroy',
+                                      item_path(item),
+                                      method: :delete,
+                                      class: "create_new_item",
+                                      data: { confirm: 'Are you sure?' } %></td>
+            
+          </tr>
+        <% end %>
+      </div>
+    </table>
+  </div>
+</body>

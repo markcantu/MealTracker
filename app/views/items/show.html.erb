@@ -1,80 +1,82 @@
-<br>
-<%= link_to 'Item List', items_path, class: "create_new_item" %>
-
-<div class="row">
-    <div class="column2">
-        <h2>Breakfast</h2>
-        <p style="width:400px; height:auto">
-        <%= image_tag(@item.image1, style: "width: 400px") %>
-        </p>
+<body class="gray">
+    <br>
+    <%= link_to 'Item List', items_path, class: "create_new_item" %>
+    
+    <div class="row">
+        <div class="column2">
+            <h2>Breakfast</h2>
+            <p style="width:400px; height:auto">
+            <%= image_tag(@item.image1, style: "width: 400px") %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Date:</strong>
+                <%= @item.date %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Food:</strong>
+                <%= @item.title1 %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Description:</strong>
+                <%= @item.text1 %>
+            </p>
+        </div>
         
-        <p>
-            <strong class="title_text">Date:</strong>
-            <%= @item.date %>
-        </p>
+        <div class="column2">
+            <h2>Lunch</h2>
+            <p style="width:400px; height:auto">
+            <%= image_tag(@item.image2, style: "width: 400px") %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Date:</strong>
+                <%= @item.date %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Food:</strong>
+                <%= @item.title2 %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Description:</strong>
+                <%= @item.text2 %>
+            </p>
+        </div>
         
-        <p>
-            <strong class="title_text">Food:</strong>
-            <%= @item.title1 %>
-        </p>
-        
-        <p>
-            <strong class="title_text">Description:</strong>
-            <%= @item.text1 %>
-        </p>
+        <div class="column2">
+            <h2>Dinner</h2>
+            <p style="width:400px; height:auto">
+            <%= image_tag(@item.image3, style: "width: 400px")%>
+            </p>
+            
+            <p>
+                <strong class="title_text">Date:</strong>
+                <%= @item.date %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Food:</strong>
+                <%= @item.title3 %>
+            </p>
+            
+            <p>
+                <strong class="title_text">Description:</strong>
+                <%= @item.text3 %>
+            </p>
+        </div>
     </div>
     
-    <div class="column2">
-        <h2>Lunch</h2>
-        <p style="width:400px; height:auto">
-        <%= image_tag(@item.image2, style: "width: 400px") %>
-        </p>
-        
-        <p>
-            <strong class="title_text">Date:</strong>
-            <%= @item.date %>
-        </p>
-        
-        <p>
-            <strong class="title_text">Food:</strong>
-            <%= @item.title2 %>
-        </p>
-        
-        <p>
-            <strong class="title_text">Description:</strong>
-            <%= @item.text2 %>
-        </p>
-    </div>
+    <br>
     
-    <div class="column2">
-        <h2>Dinner</h2>
-        <p style="width:400px; height:auto">
-        <%= image_tag(@item.image3, style: "width: 400px")%>
-        </p>
-        
-        <p>
-            <strong class="title_text">Date:</strong>
-            <%= @item.date %>
-        </p>
-        
-        <p>
-            <strong class="title_text">Food:</strong>
-            <%= @item.title3 %>
-        </p>
-        
-        <p>
-            <strong class="title_text">Description:</strong>
-            <%= @item.text3 %>
-        </p>
-    </div>
-</div>
-
-<br>
-
-<h2>Comments</h2>
-<%= render @item.comments %>
-
-<br>
-
-<h2>Add a commment:</h2>
-<%= render 'comments/form' %>
+    <h2>Comments</h2>
+    <%= render @item.comments %>
+    
+    <br>
+    
+    <h2>Add a commment:</h2>
+    <%= render 'comments/form' %>
+</body>

@@ -22,6 +22,7 @@ textarea {
 
 input[type=button], input[type=submit] {
     text-decoration: none;
+    background-color: #e3e2e1;
     border: 1px solid blue;
     padding: 8px 10px;
     border-radius: 8px;
@@ -37,9 +38,9 @@ input[type=button]:hover, input[type=submit]:hover {
 }
 
 .date_select {
-    width: 17%;
-    height: 50px;
-    font-size: bold;
+    display: inline;
+    width: 25%;
+    height: 100%;
 }
 
 p {
