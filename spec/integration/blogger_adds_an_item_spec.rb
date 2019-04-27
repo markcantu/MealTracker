@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-feature"Blogger adds an item" do
+feature"Blogger manipulates the app" do
 
     scenario "Blogger successfully navigates to the new item page from the item list page" do
 
@@ -32,18 +32,31 @@ feature"Blogger adds an item" do
 
     end
 
-    # scenario "Blogger wants to go to edit page after viewing item" do
+    scenario "Blogger wants to navigate from welcome page to view all previous entries" do
 
-    #     visit items_path
+        visit root_path
 
-    #     click_link "Edit"
+        click_link "Current Items"
 
-    #     expect(page).to have_content("Edit Meal Item Listing")
+        expect(page).to have_content("Listing items")
 
-    #     expect(page).to have_link("Back")
+        expect(page).to have_link("Home")
 
-    #     expect(page).to have_link("submit")
+        expect(page).to have_link("Add new item")
 
-    # end
+    end
+    
+    scenario "Blogger wants to navigate from welcome page to create new item page" do
 
+         visit root_path
+
+        click_link "Create New Item"
+
+        expect(page).to have_content("New Meal Item")
+        
+        expect(page).to have_link("Home")
+        
+        expect(page).to have_link("List Items")
+        
+    end
 end

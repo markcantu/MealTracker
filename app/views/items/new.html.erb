@@ -1,6 +1,7 @@
 <body class="gray">
   <h1 class="listing">New Meal Item</h1> 
   
+  <%= link_to 'Home', root_path, class: "create_new_item" %>
   <%= link_to 'List Items', items_path, class: "create_new_item" %>
   
   <%= form_for :item, url: items_path do |f| %>
