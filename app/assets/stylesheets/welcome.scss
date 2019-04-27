@@ -4,9 +4,9 @@
 
 h1 {
     font-size: 70px;
-    color: black;
+    color: white;
+    text-shadow: 2px 2px black;
     animation:  glow 2s infinite;
-    text-shadow: 0 0 50px white;
     font-family: "Bungee Shade", cursive;
 }
 
@@ -30,13 +30,14 @@ h1 {
 
 .welcome_container {
     text-align: center;
-    margin-top: 10%;
+    
 }
 
 .create_new_item {
-    background-color: #e3e2e1;
+    color: white;
+    background-color: #3e8909;
     text-decoration: none;
-    border: 1px solid blue;
+    border: 1px #3e8909;
     padding: 8px 10px;
     border-radius: 8px;
     margin-top: 10px;
@@ -58,4 +59,24 @@ h1 {
 
 .gray {
     background-color: #e3e2e1;
+}
+
+.topnav {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.topnav h1 {
+    text-shadow: 2px 2px black;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#list_page {
+    background: url(lunch.jpg);
+    height: 500px;
+    max-width: 100%;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }

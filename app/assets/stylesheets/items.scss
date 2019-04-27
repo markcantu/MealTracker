@@ -68,6 +68,17 @@ p {
   width: 33.33%;
 }
 
+.date {
+    text-shadow: 2px 2px black;
+    color: white;
+    font-size: 24px;
+}
+
+#nums {
+    text-shadow: 4px 4px black;
+    color: white;
+    font-size: 24px;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
