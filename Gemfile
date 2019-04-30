@@ -40,6 +40,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'paperclip', '~> 6.1'
 gem 'aws-sdk-s3', '~> 1.36'
 gem 'image_processing', '~> 1.2'
+
+#For Google Authentication
+gem "omniauth-google-oauth2", "~> 0.5.3"
+gem "omniauth-oauth2", "~> 1.5"
  
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
