@@ -6,13 +6,19 @@
   <div class="tablediv">
     <table>
       <tr>
-        <th class="date">Date</th>
+        <th class="header">Date</th>
+        <th class="header">Breakfast</th>
+        <th class="header">Lunch</th>
+        <th class="header">Dinner</th>
       </tr>
       
       <div id="table">
         <% @items.each do |item| %>
           <tr>
-            <td class="column" id="nums"><%= item.date %></td>
+            <td class="column nums"><%= item.date %></td>
+            <td class="column nums"><%= item.title1 %></td>
+            <td class="column nums"><%= item.title2 %></td>
+            <td class="column nums"><%= item.title3 %></td>
             <td><%= link_to 'Show', item_path(item), class: "create_new_item" %></td>
             <td><%= link_to 'Edit', edit_item_path(item), class: "create_new_item" %></td>
             <td><%= link_to 'Destroy',
