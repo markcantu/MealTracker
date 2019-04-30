@@ -12,10 +12,10 @@
   <body>
     <div>
       <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <span class="googlesign">Signed in as <strong><%= current_user.name %></strong></span>!
+        <%= link_to "Sign out", signout_path, id: "sign_out", class: "create_new_item2"%>
       <% else %>
-        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class: "create_new_item2" %>
       <% end %>
     </div>
     <%= yield %>
